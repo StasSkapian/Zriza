@@ -14,7 +14,7 @@ export class AppComponent {
 
   constructor(private http: HttpClient) { }
 
-  getUsers(): any
+  getProjects(): any
   {
     return this.http.get<any>("api/record/Project", {
       headers: {
@@ -24,11 +24,30 @@ export class AppComponent {
     });
   }
 
-
-
-  clickMe()
+  getTasks(): any
   {
-    this.getUsers().subscribe(
+    return this.http.get<any>("api/record/Task", {
+      headers: {
+          "Authorization": '96236a7b-7758-49e1-8475-0b6020755707',
+          "tokenId": "96236a7b-7758-49e1-8475-0b6020755707",
+      }
+    });
+  }
+
+
+
+  clickMeProject()
+  {
+    this.getProjects().subscribe(
+      res => {
+        console.log(res);
+      }
+    );;
+  }
+
+  clickMeTask()
+  {
+    this.getTasks().subscribe(
       res => {
         console.log(res);
       }

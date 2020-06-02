@@ -1,0 +1,5 @@
+GET https://api.powerlink.co.il/api/record/Project
+tokenid: 96236a7b-7758-49e1-8475-0b6020755707
+Authorization: 96236a7b-7758-49e1-8475-0b6020755707
+
+
